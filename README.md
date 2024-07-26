@@ -32,9 +32,10 @@ To install the CoinCBC MILP solver, follow these steps:
 ```
 wget https://raw.githubusercontent.com/coin-or/coinbrew/master/coinbrew
 chmod u+x coinbrew
-./coinbrew fetch Cbc@2.10.5 (It has to be version 2.10.5, the egg project cannot read the file library with lasted master version.)
+./coinbrew fetch Cbc@2.10.5
 ./coinbrew build Cbc
 ```
+Note: It has to be version 2.10.5, as the egg project cannot read the file library with the latest master version.
 
 ### Update Environment Variables
 Ensure the CoinCBC binaries and libraries are included in your system's PATH and library path:

@@ -6,10 +6,8 @@ This project implements Egraph mapping via equality saturation, using dynamic ru
 
 ## Usage
 
-Before running the project, ensure the following steps are completed.
-
 ### Prepare Dynamic Rules
-python infix_to_prefix.py -f 7nm.genlib  # Prepare the dynamic rules based on the provided library
+```python infix_to_prefix.py -f 7nm.genlib  # Prepare the dynamic rules based on the provided library
 
 ### Run the Project
 cargo run

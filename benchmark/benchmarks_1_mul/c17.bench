@@ -1,0 +1,13 @@
+# c17
+# 5 inputs
+# 2 outputs
+# 0 inverter
+# 6 gates ( 6 NANDs )
+
+
+INPUT(3)
+INPUT(6)
+
+OUTPUT(11)
+
+11 = AND(3, 6)

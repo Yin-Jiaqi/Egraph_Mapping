@@ -1,0 +1,7 @@
+cec benchmark/synthetic/c432/c432.blif benchmark/synthetic/c432/c432_map.blif
+source -s abc.rc
+read benchmark/synthetic/c2670/
+read 7nm.genlib
+read_genlib 7nm.genlib
+read benchmark/synthetic/c2670/c2670_map.blif
+read benchmark/synthetic/c2670/c2670.blif

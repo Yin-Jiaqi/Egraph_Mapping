@@ -1,0 +1,5 @@
+read ../../../7nm.genlib
+cec mult2.blif mult2-map.blif
+source -s abc.rc
+read_genlib ../../../7nm.genlib
+cec mult2-map.blif mult2.blif

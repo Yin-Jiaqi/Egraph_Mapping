@@ -1,0 +1,13 @@
+.model c17_EGG
+.inputs 1 2 3 6 7
+.outputs 22 23
+.gate AND2x2_ASAP7_75t_L A=3 B=6 Y=temp_1
+.gate INVx1_ASAP7_75t_L A=temp_1 Y=temp_2
+.gate AND2x2_ASAP7_75t_L A=temp_2 B=7 Y=temp_3
+.gate AND2x2_ASAP7_75t_L A=2 B=temp_2 Y=temp_4
+.gate NOR2xp33_ASAP7_75t_L A=temp_4 B=temp_3 Y=temp_5
+.gate INVxp67_ASAP7_75t_L A=temp_5 Y=23
+.gate AND2x2_ASAP7_75t_L A=1 B=3 Y=temp_6
+.gate NOR2xp33_ASAP7_75t_L A=temp_6 B=temp_4 Y=temp_7
+.gate INVxp33_ASAP7_75t_L A=temp_7 Y=22
+.end

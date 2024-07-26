@@ -1,0 +1,5 @@
+source -s abc.rc
+read ../../iscas85/c5315.bench
+read ../../../7nm.genlib
+read_genlib ../../../7nm.genlib
+write c5315_map.blif

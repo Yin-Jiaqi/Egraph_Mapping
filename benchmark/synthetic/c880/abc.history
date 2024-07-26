@@ -1,0 +1,6 @@
+source -s abc.rc
+read ../../../7nm.genlib
+read_genlib ../../../7nm.genlib
+read c880.bench
+write c880_map.blif
+cec c880_map.blif c880.blif

@@ -1,0 +1,134 @@
+# Benchmark "c432" written by ABC on Fri Jul 26 10:02:43 2024
+.model c432
+.inputs 1 4 8 11 14 17 21 24 27 30 34 37 40 43 47 50 53 56 60 63 66 69 73 \
+ 76 79 82 86 89 92 95 99 102 105 108 112 115
+.outputs 223 329 370 421 430 431 432
+.gate INVx1_ASAP7_75t_L         A=17 Y=new_n44
+.gate NOR2xp33_ASAP7_75t_L      A=new_n44 B=11 Y=new_n45
+.gate INVx1_ASAP7_75t_L         A=4 Y=new_n46
+.gate INVx1_ASAP7_75t_L         A=30 Y=new_n47
+.gate OAI22xp33_ASAP7_75t_L     A1=new_n47 A2=24 B1=new_n46 B2=1 Y=new_n48
+.gate INVx1_ASAP7_75t_L         A=95 Y=new_n49
+.gate INVx1_ASAP7_75t_L         A=108 Y=new_n50
+.gate OAI22xp33_ASAP7_75t_L     A1=new_n50 A2=102 B1=new_n49 B2=89 Y=new_n51
+.gate INVx1_ASAP7_75t_L         A=69 Y=new_n52
+.gate INVx1_ASAP7_75t_L         A=82 Y=new_n53
+.gate OAI22xp33_ASAP7_75t_L     A1=new_n53 A2=76 B1=new_n52 B2=63 Y=new_n54
+.gate INVx1_ASAP7_75t_L         A=43 Y=new_n55
+.gate INVx1_ASAP7_75t_L         A=56 Y=new_n56
+.gate OAI22xp33_ASAP7_75t_L     A1=new_n56 A2=50 B1=new_n55 B2=37 Y=new_n57
+.gate NOR5xp2_ASAP7_75t_L       A=new_n57 B=new_n54 C=new_n51 D=new_n48 E=new_n45 Y=new_n58
+.gate INVx1_ASAP7_75t_L         A=new_n58 Y=223
+.gate NOR2xp33_ASAP7_75t_L      A=new_n47 B=24 Y=new_n60
+.gate NOR2xp33_ASAP7_75t_L      A=new_n46 B=1 Y=new_n61
+.gate NOR2xp33_ASAP7_75t_L      A=new_n61 B=new_n60 Y=new_n62
+.gate NOR3xp33_ASAP7_75t_L      A=new_n57 B=new_n54 C=new_n51 Y=new_n63
+.gate NOR2xp33_ASAP7_75t_L      A=21 B=new_n44 Y=new_n64
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=new_n63 B=new_n45 A2=new_n62 C=new_n64 Y=new_n65
+.gate XNOR2xp5_ASAP7_75t_L      A=new_n58 B=new_n60 Y=new_n66
+.gate OR2x2_ASAP7_75t_L         A=34 B=new_n47 Y=new_n67
+.gate XNOR2xp5_ASAP7_75t_L      A=new_n58 B=new_n61 Y=new_n68
+.gate INVx1_ASAP7_75t_L         A=8 Y=new_n69
+.gate NAND2xp33_ASAP7_75t_L     A=new_n69 B=4 Y=new_n70
+.gate OAI221xp5_ASAP7_75t_L     A1=new_n70 A2=new_n68 B1=new_n67 B2=new_n66 C=new_n65 Y=new_n71
+.gate NOR2xp33_ASAP7_75t_L      A=new_n50 B=102 Y=new_n72
+.gate XNOR2xp5_ASAP7_75t_L      A=new_n58 B=new_n72 Y=new_n73
+.gate NOR3xp33_ASAP7_75t_L      A=new_n73 B=112 C=new_n50 Y=new_n74
+.gate INVx1_ASAP7_75t_L         A=89 Y=new_n75
+.gate NAND2xp33_ASAP7_75t_L     A=95 B=new_n75 Y=new_n76
+.gate XOR2xp5_ASAP7_75t_L       A=new_n58 B=new_n76 Y=new_n77
+.gate NOR3xp33_ASAP7_75t_L      A=new_n77 B=99 C=new_n49 Y=new_n78
+.gate INVx1_ASAP7_75t_L         A=76 Y=new_n79
+.gate NAND2xp33_ASAP7_75t_L     A=82 B=new_n79 Y=new_n80
+.gate XOR2xp5_ASAP7_75t_L       A=new_n58 B=new_n80 Y=new_n81
+.gate INVx1_ASAP7_75t_L         A=86 Y=new_n82
+.gate NAND2xp33_ASAP7_75t_L     A=new_n82 B=82 Y=new_n83
+.gate INVx1_ASAP7_75t_L         A=63 Y=new_n84
+.gate NAND2xp33_ASAP7_75t_L     A=69 B=new_n84 Y=new_n85
+.gate XOR2xp5_ASAP7_75t_L       A=new_n58 B=new_n85 Y=new_n86
+.gate OAI32xp33_ASAP7_75t_L     A1=new_n86 A2=73 A3=new_n52 B1=new_n83 B2=new_n81 Y=new_n87
+.gate INVx1_ASAP7_75t_L         A=50 Y=new_n88
+.gate NAND2xp33_ASAP7_75t_L     A=56 B=new_n88 Y=new_n89
+.gate XOR2xp5_ASAP7_75t_L       A=new_n58 B=new_n89 Y=new_n90
+.gate OR2x2_ASAP7_75t_L         A=60 B=new_n56 Y=new_n91
+.gate INVx1_ASAP7_75t_L         A=37 Y=new_n92
+.gate NAND2xp33_ASAP7_75t_L     A=43 B=new_n92 Y=new_n93
+.gate XOR2xp5_ASAP7_75t_L       A=new_n58 B=new_n93 Y=new_n94
+.gate OAI32xp33_ASAP7_75t_L     A1=new_n94 A2=47 A3=new_n55 B1=new_n91 B2=new_n90 Y=new_n95
+.gate NOR5xp2_ASAP7_75t_L       A=new_n95 B=new_n87 C=new_n78 D=new_n74 E=new_n71 Y=new_n96
+.gate INVx1_ASAP7_75t_L         A=new_n96 Y=329
+.gate INVx1_ASAP7_75t_L         A=new_n65 Y=new_n98
+.gate OR2x2_ASAP7_75t_L         A=new_n70 B=new_n68 Y=new_n99
+.gate OA21x2_ASAP7_75t_L        A1=new_n67 B=new_n99 A2=new_n66 Y=new_n100
+.gate NOR4xp25_ASAP7_75t_L      A=new_n95 B=new_n87 C=new_n78 D=new_n74 Y=new_n101
+.gate AOI21xp33_ASAP7_75t_L     A1=new_n63 B=new_n45 A2=new_n62 Y=new_n102
+.gate NOR3xp33_ASAP7_75t_L      A=new_n102 B=27 C=new_n44 Y=new_n103
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=new_n101 B=new_n98 A2=new_n100 C=new_n103 Y=new_n104
+.gate NOR2xp33_ASAP7_75t_L      A=new_n67 B=new_n66 Y=new_n105
+.gate AOI31xp33_ASAP7_75t_L     A1=new_n101 B=new_n105 A2=new_n99 A3=new_n65 Y=new_n106
+.gate OR3x1_ASAP7_75t_L         A=new_n66 B=40 C=new_n47 Y=new_n107
+.gate XOR2xp5_ASAP7_75t_L       A=new_n96 B=new_n99 Y=new_n108
+.gate OR3x1_ASAP7_75t_L         A=new_n68 B=14 C=new_n46 Y=new_n109
+.gate OAI221xp5_ASAP7_75t_L     A1=new_n109 A2=new_n108 B1=new_n107 B2=new_n106 C=new_n104 Y=new_n110
+.gate XNOR2xp5_ASAP7_75t_L      A=new_n96 B=new_n74 Y=new_n111
+.gate NOR4xp25_ASAP7_75t_L      A=new_n111 B=new_n73 C=115 D=new_n50 Y=new_n112
+.gate XNOR2xp5_ASAP7_75t_L      A=new_n96 B=new_n78 Y=new_n113
+.gate NOR4xp25_ASAP7_75t_L      A=new_n113 B=new_n77 C=105 D=new_n49 Y=new_n114
+.gate NOR2xp33_ASAP7_75t_L      A=new_n83 B=new_n81 Y=new_n115
+.gate XNOR2xp5_ASAP7_75t_L      A=new_n96 B=new_n115 Y=new_n116
+.gate OR3x1_ASAP7_75t_L         A=new_n81 B=92 C=new_n53 Y=new_n117
+.gate NOR3xp33_ASAP7_75t_L      A=new_n86 B=73 C=new_n52 Y=new_n118
+.gate XNOR2xp5_ASAP7_75t_L      A=new_n96 B=new_n118 Y=new_n119
+.gate OR2x2_ASAP7_75t_L         A=79 B=new_n52 Y=new_n120
+.gate OAI32xp33_ASAP7_75t_L     A1=new_n120 A2=new_n119 A3=new_n86 B1=new_n117 B2=new_n116 Y=new_n121
+.gate NOR2xp33_ASAP7_75t_L      A=new_n91 B=new_n90 Y=new_n122
+.gate XNOR2xp5_ASAP7_75t_L      A=new_n96 B=new_n122 Y=new_n123
+.gate OR3x1_ASAP7_75t_L         A=new_n90 B=66 C=new_n56 Y=new_n124
+.gate NOR3xp33_ASAP7_75t_L      A=new_n94 B=47 C=new_n55 Y=new_n125
+.gate XNOR2xp5_ASAP7_75t_L      A=new_n96 B=new_n125 Y=new_n126
+.gate OR2x2_ASAP7_75t_L         A=53 B=new_n55 Y=new_n127
+.gate OAI32xp33_ASAP7_75t_L     A1=new_n127 A2=new_n126 A3=new_n94 B1=new_n124 B2=new_n123 Y=new_n128
+.gate OR5x1_ASAP7_75t_L         A=new_n128 B=new_n121 C=new_n114 D=new_n112 E=new_n110 Y=370
+.gate NAND2xp33_ASAP7_75t_L     A=370 B=14 Y=new_n130
+.gate AOI221xp5_ASAP7_75t_L     A1=329 B1=223 C=new_n46 B2=1 A2=8 Y=new_n131
+.gate NOR2xp33_ASAP7_75t_L      A=new_n48 B=new_n45 Y=new_n132
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=new_n63 B=new_n79 A2=new_n132 C=82 Y=new_n133
+.gate AO21x1_ASAP7_75t_L        A1=329 A2=86 B=new_n133 Y=new_n134
+.gate AOI21xp33_ASAP7_75t_L     A1=370 B=new_n134 A2=92 Y=new_n135
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=new_n63 B=new_n84 A2=new_n132 C=69 Y=new_n136
+.gate AOI221xp5_ASAP7_75t_L     A1=370 B1=329 C=new_n136 B2=73 A2=79 Y=new_n137
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=new_n63 B=new_n88 A2=new_n132 C=56 Y=new_n138
+.gate AO21x1_ASAP7_75t_L        A1=329 A2=60 B=new_n138 Y=new_n139
+.gate AOI21xp33_ASAP7_75t_L     A1=370 B=new_n139 A2=66 Y=new_n140
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=new_n63 B=new_n92 A2=new_n132 C=43 Y=new_n141
+.gate AO21x1_ASAP7_75t_L        A1=329 A2=47 B=new_n141 Y=new_n142
+.gate AOI21xp33_ASAP7_75t_L     A1=370 B=new_n142 A2=53 Y=new_n143
+.gate NOR4xp25_ASAP7_75t_L      A=new_n143 B=new_n140 C=new_n137 D=new_n135 Y=new_n144
+.gate INVx1_ASAP7_75t_L         A=40 Y=new_n145
+.gate NOR5xp2_ASAP7_75t_L       A=new_n128 B=new_n121 C=new_n114 D=new_n112 E=new_n110 Y=new_n146
+.gate INVx1_ASAP7_75t_L         A=11 Y=new_n147
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=new_n63 B=new_n147 A2=new_n62 C=17 Y=new_n148
+.gate AOI221xp5_ASAP7_75t_L     A1=370 B1=329 C=new_n148 B2=21 A2=27 Y=new_n149
+.gate INVx1_ASAP7_75t_L         A=24 Y=new_n150
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=new_n63 B=new_n150 A2=new_n132 C=30 Y=new_n151
+.gate AOI21xp33_ASAP7_75t_L     A1=329 B=new_n151 A2=34 Y=new_n152
+.gate O2A1O1Ixp33_ASAP7_75t_L   A1=new_n146 A2=new_n145 C=new_n149 B=new_n152 Y=new_n153
+.gate INVx1_ASAP7_75t_L         A=115 Y=new_n154
+.gate AOI221xp5_ASAP7_75t_L     A1=329 B1=223 C=new_n50 B2=102 A2=112 Y=new_n155
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=new_n63 B=new_n75 A2=new_n132 C=95 Y=new_n156
+.gate AOI221xp5_ASAP7_75t_L     A1=370 B1=329 C=new_n156 B2=99 A2=105 Y=new_n157
+.gate O2A1O1Ixp33_ASAP7_75t_L   A1=new_n146 A2=new_n154 C=new_n157 B=new_n155 Y=new_n158
+.gate AOI32xp33_ASAP7_75t_L     A1=new_n158 B1=new_n131 B2=new_n130 A2=new_n153 A3=new_n144 Y=421
+.gate AO21x1_ASAP7_75t_L        A1=370 A2=66 B=new_n139 Y=new_n160
+.gate INVx1_ASAP7_75t_L         A=new_n152 Y=new_n161
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=370 B=new_n161 A2=40 C=new_n143 Y=new_n162
+.gate NAND3xp33_ASAP7_75t_L     A=new_n162 B=new_n153 C=new_n160 Y=430
+.gate OAI21xp33_ASAP7_75t_L     A1=new_n146 A2=new_n145 B=new_n152 Y=new_n164
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=370 B=new_n142 A2=53 C=new_n164 Y=new_n165
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=370 B=new_n139 A2=66 C=new_n137 Y=new_n166
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=370 B=new_n139 A2=66 C=new_n135 Y=new_n167
+.gate OAI221xp5_ASAP7_75t_L     A1=new_n167 A2=new_n143 B1=new_n166 B2=new_n165 C=new_n153 Y=431
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=370 B=new_n134 A2=92 C=new_n157 Y=new_n169
+.gate A2O1A1O1Ixp25_ASAP7_75t_L A1=370 B=new_n161 D=new_n149 A2=40 C=new_n143 Y=new_n170
+.gate A2O1A1Ixp33_ASAP7_75t_L   A1=new_n169 B=new_n165 A2=new_n166 C=new_n170 Y=432
+.end

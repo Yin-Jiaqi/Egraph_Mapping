@@ -1,0 +1,6 @@
+gen -N 2 -m mult2.blif
+source -s abc.rc
+read ../../7nm.genlib
+read_genlib ../../7nm.genlib
+read mult2.blif
+write mult2_map.blif

@@ -1,0 +1,12 @@
+# c499
+# 41 inputs
+# 32 outputs
+# 40 inverters
+# 162 gates ( 56 ANDs + 40 NANDs + 2 ORs + 104 XORs )
+
+INPUT(1)
+INPUT(2)
+
+OUTPUT(3)
+
+3 = XOR(1, 2)

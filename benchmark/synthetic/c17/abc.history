@@ -1,0 +1,6 @@
+source -s abc.rc
+read ../../../7nm.genlib
+read_genlib ../../../7nm.genlib
+read c17.bench
+write c17_map.blif
+cec c17_map.blif c17.blif

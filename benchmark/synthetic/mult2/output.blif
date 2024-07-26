@@ -1,0 +1,14 @@
+# Benchmark "Multi2" written by ABC on Wed Jul 24 12:22:41 2024
+.model Mult2_EGG
+.inputs a0 a1 b0 b1
+.outputs m0 m1 m2 m3
+.gate AND2x2_ASAP7_75t_L         A=a1 B=b1 Y=o1
+.gate AND2x2_ASAP7_75t_L         A=a0 B=b1 Y=o2
+.gate AND2x2_ASAP7_75t_L         A=a1 B=b0 Y=o3
+.gate AND2x2_ASAP7_75t_L         A=o3 B=o2 Y=o4
+.gate NOR2xp33_ASAP7_75t_L         A=o4 B=o1 Y=o5
+.gate AND2x2_ASAP7_75t_L         A=o4 B=o1 Y=m3
+.gate NOR2xp33_ASAP7_75t_L         A=m3 B=o5 Y=m2
+.gate NOR2xp33_ASAP7_75t_L         A=o3 B=o2 Y=o8
+.gate NOR2xp33_ASAP7_75t_L         A=o4 B=o8 Y=m1
+.gate AND2x2_ASAP7_75t_L         A=a0 B=b0 Y=m0

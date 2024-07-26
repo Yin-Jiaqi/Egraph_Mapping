@@ -1,0 +1,14 @@
+# Benchmark "Multi2" written by ABC on Wed Jul 24 12:22:41 2024
+.model Multi2
+.inputs a0 a1 b0 b1
+.outputs m0 m1 m2 m3
+.gate INVx1_ASAP7_75t_L         A=a0 Y=new_n9
+.gate INVx1_ASAP7_75t_L         A=b0 Y=new_n10
+.gate NOR2xp33_ASAP7_75t_L      A=new_n10 B=new_n9 Y=m0
+.gate INVx1_ASAP7_75t_L         A=a1 Y=new_n12
+.gate INVx1_ASAP7_75t_L         A=b1 Y=new_n13
+.gate NOR4xp25_ASAP7_75t_L      A=new_n13 B=new_n10 C=new_n12 D=new_n9 Y=m3
+.gate NAND2xp33_ASAP7_75t_L     A=b1 B=a0 Y=new_n15
+.gate O2A1O1Ixp33_ASAP7_75t_L   A1=new_n10 A2=new_n12 C=m3 B=new_n15 Y=m1
+.gate NOR3xp33_ASAP7_75t_L      A=m0 B=new_n13 C=new_n12 Y=m2
+.end

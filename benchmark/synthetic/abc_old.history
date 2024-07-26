@@ -1,0 +1,41 @@
+write test.v
+write test.bench
+write_bench test.bench
+read benchmark/iscas85/c7552.bench 
+write test.blif
+read 7nm.genlib 
+read_genlib 7nm.genlib
+read test.blif 
+map -a
+dch -v
+source -s abc.rc
+gen -N 2 -a adder2.blif
+read adder2.blif
+gen -N 3 -a adder3.blif
+read adder3.blif
+print_gates
+read adder3.blif 
+write adder3.bench
+gen -N 2 -m mult2.blif
+write mult2.bench
+read mult2.blif
+write mult2-map.blif
+read mult2-map.blif
+map -a
+write mult2-map.blif 
+cec mult2-map.blif mult2-map.blif
+read 7nm.genlib
+cec cec mult2-map.blif mult2-map.blif 
+cec mult2-map.blif mult2-map.blif 
+match lib::parse_graph("benchmark/iscas85/c7552.bench") {
+read 7nm.genlib 
+read benchmark/iscas85/c7552.bench 
+write c7552_map.blif
+read benchmark/iscas85/c3570.bench 
+read benchmark/iscas85/c3540.bench 
+map -a
+read mult2-map.blif
+source -s abc.rc
+read 7nm.genlib
+read_genlib 7nm.genlib
+cec output.blif mult2-map.blif

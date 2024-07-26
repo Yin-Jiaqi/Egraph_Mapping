@@ -1,0 +1,14 @@
+.model mult2_EGG
+.inputs a0 a1 b0 b1
+.outputs m0 m1 m2 m3
+.gate AND2x2_ASAP7_75t_L A=a1 B=b1 Y=temp_1
+.gate AND2x2_ASAP7_75t_L A=a0 B=b1 Y=temp_2
+.gate AND2x2_ASAP7_75t_L A=a1 B=b0 Y=temp_3
+.gate AND2x2_ASAP7_75t_L A=temp_3 B=temp_2 Y=temp_4
+.gate AND2x2_ASAP7_75t_L A=temp_4 B=temp_1 Y=m3
+.gate NOR2xp33_ASAP7_75t_L A=temp_4 B=temp_1 Y=temp_5
+.gate NOR2xp33_ASAP7_75t_L A=m3 B=temp_5 Y=m2
+.gate NOR2xp33_ASAP7_75t_L A=temp_3 B=temp_2 Y=temp_6
+.gate NOR2xp33_ASAP7_75t_L A=temp_4 B=temp_6 Y=m1
+.gate AND2x2_ASAP7_75t_L A=a0 B=b0 Y=m0
+.end

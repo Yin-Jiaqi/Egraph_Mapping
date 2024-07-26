@@ -1,0 +1,6 @@
+read c432.bench
+write c432_map.blif
+source -s abc.rc
+read ../../../7nm.genlib
+read_genlib ../../../7nm.genlib
+cec c432.blif c432_map.blif
